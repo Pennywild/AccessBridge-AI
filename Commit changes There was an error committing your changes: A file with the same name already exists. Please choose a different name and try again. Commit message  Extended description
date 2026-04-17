@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AccessBridge AI</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 100px;
+        }
+        input {
+            width: 300px;
+            padding: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            margin-left: 10px;
+        }
+        #results {
+            margin-top: 30px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>AccessBridge AI</h1>
+    <p>Scan a website for accessibility issues</p>
+
+    <input id="urlInput" placeholder="Enter website URL" />
+    <button onclick="scanSite()">Scan</button>
+
+    <div id="results"></div>
+
+    <script>
+        function scanSite() {
+            const url = document.getElementById("urlInput").value;
+
+            if (!url) {
+                alert("Please enter a URL");
+                return;
+            }
+
+            // Simulated AI response
+            document.getElementById("results").innerHTML = `
+                <p><strong>Results for:</strong> ${url}</p>
+                <ul>
+                    <li>Missing alt text on images</li>
+                    <li>Low color contrast detected</li>
+                    <li>Buttons missing labels</li>
+                </ul>
+            `;
+        }
+    </script>
+
+</body>
+</html>
